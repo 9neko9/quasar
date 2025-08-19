@@ -1,19 +1,26 @@
-<body>
-  <div class="top-bar"></div>
-  <div class="spacer"></div>
+<script>
+  // 띠 높이 (픽셀)
+  const BAR_HEIGHT = 50;
 
-  <section class="image-section" id="section1">
-    <div class="blur-background"></div>
-  </section>
+  // 위쪽 검은 띠 생성
+  const topBar = document.createElement('div');
+  topBar.style.width = '100%';
+  topBar.style.height = BAR_HEIGHT + 'px';
+  topBar.style.backgroundColor = 'black';
 
-  <section class="image-section" id="section2">
-    <div class="blur-background"></div>
-  </section>
+  // 아래쪽 검은 띠 생성
+  const bottomBar = document.createElement('div');
+  bottomBar.style.width = '100%';
+  bottomBar.style.height = BAR_HEIGHT + 'px';
+  bottomBar.style.backgroundColor = 'black';
 
-  <section class="image-section" id="section3">
-    <div class="blur-background"></div>
-  </section>
+  // body 첫 자식 앞에 위쪽 띠 삽입
+  document.body.insertBefore(topBar, document.body.firstChild);
 
-  <div class="spacer"></div>
-  <div class="bottom-bar"></div>
-</body>
+  // body 맨 끝에 아래쪽 띠 삽입
+  document.body.appendChild(bottomBar);
+
+  // body에 위아래 패딩 추가해서 띠 높이 공간 확보
+  document.body.style.paddingTop = BAR_HEIGHT + 'px';
+  document.body.style.paddingBottom = BAR_HEIGHT + 'px';
+</script>
