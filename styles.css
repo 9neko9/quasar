@@ -1,59 +1,42 @@
-/* 전체 초기화 */
+/* 초기화 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body, html {
+html, body {
   height: 100%;
-  font-family: sans-serif;
+  scroll-behavior: smooth;
 }
 
-/* 한 화면을 꽉 채우는 섹션 */
+/* 각 섹션은 화면 전체를 차지 */
 .image-section {
-  position: relative;
   height: 100vh;
-  overflow: hidden;
-}
-
-/* 블러 처리된 배경 */
-.blur-background {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
   background-size: cover;
   background-position: center;
-  filter: blur(6px);
-  transform: scale(1.05);
-  z-index: 1;
+  background-repeat: no-repeat;
 }
 
-/* 콘텐츠 위에 오게 */
-.content {
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* 배경 이미지 설정 */
+.section1 {
+  background-image: url('background1.jpg');
 }
 
-.content h1 {
-  color: white;
-  font-size: 3em;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+.section2 {
+  background-image: url('background2.jpg');
 }
 
-/* 각 섹션 배경 이미지 지정 */
-#section1 .blur-background {
-  background-image: url('background3.png');
+.section3 {
+  background-image: url('background3.jpg');
 }
 
-#section2 .blur-background {
-  background-image: url('background2.png');
+/* (선택) 스크롤 스냅 적용 – perigee 느낌 */
+body {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
 }
 
-#section3 .blur-background {
-  background-image: url('background1.png');
+.image-section {
+  scroll-snap-align: start;
 }
-
