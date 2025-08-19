@@ -56,7 +56,7 @@ html, body {
 }
 
 #section2 .blur-background {
-  background-image: url('background2.jpg');
+  background-image: url('background2.png');
 }
 
 #section3 .blur-background {
@@ -68,3 +68,4 @@ html, body {
   position: relative;
   z-index: 2;
 }
+
