@@ -21,13 +21,14 @@ html, body {
 
 /* 각 섹션에 이미지 연결 */
 #section1 {
-  background-image: url('img1.jpg');
+  background-image: url('background3.png');
 }
 
 #section2 {
-  background-image: url('img2.jpg');
+  background-image: url('background2.jpg');
 }
 
 #section3 {
-  background-image: url('img3.jpg');
+  background-image: url('background1.png');
 }
+
