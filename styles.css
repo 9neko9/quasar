@@ -13,7 +13,7 @@ section {
 
 /* 패럴랙스 배경 스타일 */
 .parallax {
-    background-image: url('your-image.jpg'); /* 배경 이미지 경로 */
+    background-image: url('background1.png'); /* 배경 이미지 경로 */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -53,3 +53,4 @@ section {
   z-index: 1000;          /* 항상 위에 보이게 */
   pointer-events: none;   /* 클릭 방해 안 되게 (선택사항) */
 }
+
