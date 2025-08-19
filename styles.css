@@ -20,15 +20,15 @@ html, body {
 
 /* 배경 이미지 설정 */
 .section1 {
-  background-image: url('background1.jpg');
+  background-image: url('background1.png');
 }
 
 .section2 {
-  background-image: url('background2.jpg');
+  background-image: url('background2.png');
 }
 
 .section3 {
-  background-image: url('background3.jpg');
+  background-image: url('background3.png');
 }
 
 /* (선택) 스크롤 스냅 적용 – perigee 느낌 */
@@ -40,3 +40,4 @@ body {
 .image-section {
   scroll-snap-align: start;
 }
+
