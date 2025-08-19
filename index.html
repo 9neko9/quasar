@@ -8,30 +8,9 @@
 </head>
 <body>
 
-  <section class="image-section" id="section1">
-    <div class="text">Creative in space</div>
-  </section>
-
+  <section class="image-section" id="section1"></section>
   <section class="image-section" id="section2"></section>
   <section class="image-section" id="section3"></section>
-
-  <script>
-    const section1 = document.getElementById('section1');
-
-    function onScroll() {
-      const rect = section1.getBoundingClientRect();
-      const vh = window.innerHeight;
-
-      if (rect.top < vh / 2 && rect.bottom > vh / 2) {
-        section1.classList.add('active');
-      } else {
-        section1.classList.remove('active');
-      }
-    }
-
-    window.addEventListener('scroll', onScroll);
-    onScroll();
-  </script>
 
 </body>
 </html>
