@@ -63,7 +63,7 @@ body::after {
 }
 
 #section2 .blur-background {
-  background-image: url('background2.pNg');
+  background-image: url('background2.PNG');
 }
 
 #section3 .blur-background {
@@ -75,4 +75,5 @@ body::after {
   position: relative;
   z-index: 2;
 }
+
 
