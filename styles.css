@@ -20,7 +20,7 @@ html, body {
 
 /* 배경 이미지 설정 */
 .section1 {
-  background-image: url('background1.png');
+  background-image: url('background3.png');
 }
 
 .section2 {
@@ -28,7 +28,7 @@ html, body {
 }
 
 .section3 {
-  background-image: url('background3.png');
+  background-image: url('background1.png');
 }
 
 /* (선택) 스크롤 스냅 적용 – perigee 느낌 */
@@ -40,4 +40,5 @@ body {
 .image-section {
   scroll-snap-align: start;
 }
+
 
