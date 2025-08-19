@@ -1,45 +1,26 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
   font-family: sans-serif;
   background-color: white;
-  position: relative;
-  overflow-x: hidden;
 }
 
-/* 위 검은 줄 */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 90px;  /* 줄 높이 */
+/* 검은 띠 스타일 */
+.black-bar {
+  height: 40px;  /* 검은 띠 높이 */
   background-color: black;
-  z-index: 1000;
-}
-
-/* 아래 검은 줄 */
-body::after {
-  content: '';
-  position: fixed;
-  bottom: 0;
-  left: 0;
   width: 100%;
-  height: 70px;  /* 줄 높이 */
-  background-color: black;
-  z-index: 1000;
 }
 
-/* 섹션은 화면 전체 높이 유지 */
+/* 섹션 높이 조절 */
+/* 전체 높이에서 검은 띠 높이(위+아래)를 빼고, 3개 섹션 나눔 */
 .image-section {
   position: relative;
-  height: 100vh;
+  height: calc((100vh - 80px) / 3); /* 검은 띠 40px * 2 = 80px */
   overflow: hidden;
 }
 
-/* blur-background는 섹션 전체 덮기 */
+/* 블러 배경 */
 .blur-background {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -51,7 +32,7 @@ body::after {
   z-index: 1;
 }
 
-/* 각 섹션별 배경 이미지 */
+/* 섹션별 배경 이미지 */
 #section1 .blur-background {
   background-image: url('background3.png');
 }
@@ -64,11 +45,10 @@ body::after {
   background-image: url('background1.png');
 }
 
-/* 섹션 내부 컨텐츠 */
+/* 섹션 내부 콘텐츠 */
 .image-section > *:not(.blur-background) {
   position: relative;
   z-index: 2;
 }
-
 
 
