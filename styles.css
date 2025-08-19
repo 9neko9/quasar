@@ -9,44 +9,38 @@ html, body {
   height: 100%;
   scroll-behavior: smooth;
   overflow-y: scroll;
-  scroll-snap-type: y mandatory; /* 스크롤 스냅 효과 */
+  scroll-snap-type: y mandatory;
 }
 
-/* 각 섹션 */
+/* 섹션 */
 .image-section {
-  position: relative; /* 중요 */
-  height: 100vh;      /* 화면 전체 높이 */
+  position: relative;
+  height: 100vh;
   scroll-snap-align: start;
   overflow: hidden;
-}
 
-/* 블러된 배경 */
-.blur-background {
-  position: relative;  /* absolute -> relative 변경 */
-  width: 100%;
-  height: 100%;
-  background-size: cover;
+  /* 배경 이미지 */
+  background-size: contain;     /* 이미지 비율 유지하며 전체가 보임 */
   background-position: center;
   background-repeat: no-repeat;
-  filter: blur(8px);
-  transform: none;    /* 확대 효과 제거 */
-  z-index: 1;
+
+  filter: blur(8px);  /* 블러 효과 */
 }
 
-/* 섹션별 배경 이미지 */
-#section1 .blur-background {
+/* 각 섹션별 배경 이미지 */
+#section1 {
   background-image: url('background3.png');
 }
 
-#section2 .blur-background {
+#section2 {
   background-image: url('background2.png');
 }
 
-#section3 .blur-background {
+#section3 {
   background-image: url('background1.png');
 }
 
-/* 텍스트 스타일 및 페이드 인/아웃 효과 */
+/* 텍스트 */
 .text {
   position: absolute;
   bottom: 20%;
@@ -57,9 +51,11 @@ html, body {
   opacity: 0;
   transition: opacity 0.8s ease;
   pointer-events: none;
-  z-index: 5;
+  z-index: 10;
 }
 
+/* 섹션1이 화면 중앙에 있을 때 텍스트 표시 */
 #section1.active .text {
   opacity: 1;
 }
+
