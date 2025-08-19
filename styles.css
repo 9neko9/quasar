@@ -11,24 +11,40 @@ html, body {
   font-family: sans-serif;
 }
 
-/* 전체 화면을 차지하는 섹션 */
+/* 섹션 기본 스타일 */
 .image-section {
+  position: relative;
   height: 100vh;
+  overflow: hidden;
+}
+
+/* 블러 배경 */
+.blur-background {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  filter: blur(5px); /* 블러 정도 조절 */
+  transform: scale(1.05); /* 블러 때문에 생기는 테두리 자르기 */
+  z-index: 1;
 }
 
-/* 각 섹션에 이미지 연결 */
-#section1 {
+/* 각 섹션별 배경 이미지 */
+#section1 .blur-background {
   background-image: url('background3.png');
 }
 
-#section2 {
+#section2 .blur-background {
   background-image: url('background2.jpg');
 }
 
-#section3 {
+#section3 .blur-background {
   background-image: url('background1.png');
 }
 
+/* 섹션 내부 컨텐츠가 있으면 위에 위치 */
+.image-section > *:not(.blur-background) {
+  position: relative;
+  z-index: 2;
+}
