@@ -3,7 +3,8 @@ html, body {
   padding: 0;
   font-family: sans-serif;
   background-color: white;
-  height: 100%;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
 /* 위쪽 검은 띠 */
@@ -13,9 +14,9 @@ html, body {
   width: 100%;
 }
 
-/* 아래쪽 검은 띠 스타일 */
+/* 아래쪽 검은 띠 */
 .black-bar-bottom {
-  height: auto; /* 내용에 맞게 높이 자동 조절 */
+  background-color: black;
   color: white;
   display: flex;
   flex-direction: column;
@@ -27,12 +28,13 @@ html, body {
   box-sizing: border-box;
   line-height: 1.4;
   text-align: center;
+  width: 100%;
 }
 
-/* 섹션 스타일 */
+/* 섹션 높이 조절 */
 .image-section {
   position: relative;
-  height: 100vh;
+  height: calc((100vh - 80px) / 3); /* 검은 띠 높이 뺀 후 3등분 */
   overflow: hidden;
 }
 
@@ -61,9 +63,8 @@ html, body {
   background-image: url('background1.png');
 }
 
-/* 섹션 내부 컨텐츠가 있다면 위에 위치 */
+/* 섹션 내부 컨텐츠 위치 조정 */
 .image-section > *:not(.blur-background) {
   position: relative;
   z-index: 2;
 }
-
