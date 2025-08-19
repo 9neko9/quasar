@@ -12,22 +12,20 @@ html, body {
   scroll-snap-type: y mandatory;
 }
 
-/* 섹션 */
+/* 각 섹션 전체 화면 */
 .image-section {
-  position: relative;
   height: 100vh;
   scroll-snap-align: start;
-  overflow: hidden;
 
-  /* 배경 이미지 */
-  background-size: contain;     /* 이미지 비율 유지하며 전체가 보임 */
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 
-  filter: blur(10px);  /* 블러 효과 */
+  /* 배경 사진에 블러 효과 */
+  filter: blur(8px);
 }
 
-/* 각 섹션별 배경 이미지 */
+/* 배경 이미지 지정 */
 #section1 {
   background-image: url('background3.png');
 }
@@ -39,24 +37,3 @@ html, body {
 #section3 {
   background-image: url('background1.png');
 }
-
-/* 텍스트 */
-.text {
-  position: absolute;
-  bottom: 20%;
-  width: 100%;
-  text-align: center;
-  font-size: 3em;
-  color: white;
-  opacity: 0;
-  transition: opacity 0.8s ease;
-  pointer-events: none;
-  z-index: 10;
-}
-
-/* 섹션1이 화면 중앙에 있을 때 텍스트 표시 */
-#section1.active .text {
-  opacity: 1;
-}
-
-
