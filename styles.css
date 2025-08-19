@@ -53,3 +53,14 @@ html, body {
   background-color: black;
   z-index: 10;               /* 섹션 위에 보이도록 */
 }
+.top-bar, .bottom-bar {
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  /* z-index 안 써도 됨, 기존 스타일 건드리지 않으니 충돌 없음 */
+}
+
+.spacer {
+  height: 50px;
+  width: 100%;
+}
