@@ -3,42 +3,24 @@ html, body {
   padding: 0;
   font-family: sans-serif;
   background-color: white;
-  height: 100vh;
-  overflow-x: hidden;
 }
 
-/* 위쪽 검은 띠 */
+/* 검은 띠 스타일 */
 .black-bar {
-  height: 40px;
+  height: 40px;  /* 검은 띠 높이 */
   background-color: black;
-  width: 100%;
-}
-
-/* 아래쪽 검은 띠 */
-.black-bar-bottom {
-  background-color: black;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 10px 20px;
-  box-sizing: border-box;
-  line-height: 1.4;
-  text-align: center;
   width: 100%;
 }
 
 /* 섹션 높이 조절 */
+/* 전체 높이에서 검은 띠 높이(위+아래)를 빼고, 3개 섹션 나눔 */
 .image-section {
   position: relative;
-  height: calc((100vh - 80px) / 3); /* 검은 띠 높이 뺀 후 3등분 */
+  height: calc((100vh - 80px) / 3); /* 검은 띠 40px * 2 = 80px */
   overflow: hidden;
 }
 
-/* blur background */
+/* 블러 배경 */
 .blur-background {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -50,7 +32,7 @@ html, body {
   z-index: 1;
 }
 
-/* 배경 이미지 별 섹션 */
+/* 섹션별 배경 이미지 */
 #section1 .blur-background {
   background-image: url('background3.png');
 }
@@ -63,9 +45,8 @@ html, body {
   background-image: url('background1.png');
 }
 
-/* 섹션 내부 컨텐츠 위치 조정 */
+/* 섹션 내부 콘텐츠 */
 .image-section > *:not(.blur-background) {
   position: relative;
   z-index: 2;
 }
-
